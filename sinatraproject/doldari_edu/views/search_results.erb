@@ -1,0 +1,27 @@
+<!-- search_results.erb 생성 -->
+<h2>'<%= @query %>' 검색 결과 (<%= @results.size %>건)</h2>
+
+<ul class="course-list">
+    <% if @results.empty? %>
+        <li class="course-item">검색 결과가 없습니다. 다른 키워드로 검색해 보세요!</li>
+    <% else %>
+        <% @results.each do |course| %>
+            <li class="course-item">
+                <div>
+                    <span class="category-tag"><%= course[:category] %></span>
+                    <strong>
+                        <a href="/course/<%= course[:id] %>" style="text-decoration: none; color: inherit;">
+                            <%= course[:name] %>
+                        </a>
+                    </strong>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 5px;"><%= course[:description] %></p>
+                </div>
+                <a href="/course/<%= course[:id] %>" class="btn-small" style="text-decoration: none; background: var(--primary-color); color: white; padding: 5px 10px; border-radius: 4px;">상세보기</a>
+            </li>
+        <% end %>
+    <% end %>
+</ul>
+
+<div style="margin-top: 30px;">
+    <a href="/" style="color: var(--secondary-color); text-decoration: none;">← 메인으로 돌아가기</a>
+</div>

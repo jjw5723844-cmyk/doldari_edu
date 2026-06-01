@@ -1,0 +1,15 @@
+<div class="container">
+    <h2><%= @title %></h2>
+    <div class="event-grid">
+        <% @event_list.each do |event| %>
+        <div class="event-card">
+            <span class="status <%= event[:status] == '접수대기' ? 'active' : 'none' %>">
+                <%= event[:status] %>
+            </span>
+            <h3><%= event[:title] %></h3>
+            <p>일시: <%= event[:date] %></p>
+            <button class="detail-btn">상세보기</button>
+        </div>
+        <% end %>
+    </div>
+</div>

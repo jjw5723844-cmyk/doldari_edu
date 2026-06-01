@@ -1,0 +1,47 @@
+<div class="community-header">
+    <h2>시민과 함께하는<span class="highlight">참여마당</span></h2>
+    <p>여러분의 소중한 의견에 귀를 기울입니다.</p>
+</div>
+
+<!--카드형 서브 메뉴(참여마당)-->
+<div class="community-menu-grid">
+    <div class="menu-card">
+        <div class="icon">💬</div>
+        <h4>자유게시판</h4>
+        <p>자유롭게 의견을 주고받는 공간입니다.</p>
+        <a href="/community/free" class="btn-sm">바로가기</a>
+    </div>
+
+    <div class="menu-card">
+        <div class="icon">👏</div>
+        <h4>칭찬합시다.</h4>
+        <p>학습관의 구성원들과 강사님을 칭찬해주세요.</p>
+        <a href="/community/praise" class="btn-sm">바로가기</a>
+    </div>
+
+    <div class="menu-card">
+        <div class="icon">❓</div>
+        <h4>1:1 상담문의</h4>
+        <p>궁금한 점을 상세히 답변해 드립니다.</p>
+        <a href="/community/inquiry" class="btn-sm">바로가기</a>
+    </div>
+</div>
+
+<!-- FAQ 섹션 -->
+<div class="faq-section">
+    <h3>자주 묻는 질문</h3>
+    <div class="faq-container">
+        <% @faqs.each_with_index do |faq, index| %>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="q-badge">Q</span>
+                    <%= faq[:q] %>
+                </div>
+                <div class="faq-answer">
+                    <span class="a-badge">A</span>
+                    <%= faq[:a] %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

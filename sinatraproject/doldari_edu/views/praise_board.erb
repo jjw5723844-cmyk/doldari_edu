@@ -1,0 +1,40 @@
+<div class="container board-container">
+    <div class="board-header">
+        <h2>칭찬합시다</h2>
+        <p class="board-info">돌다리 학습 평생교육원을 빛내주신 강사님과 직원을 칭찬하는 공간입니다.</p>
+    </div>
+
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th style="width: 8%;">번호</th>
+                <th>제목</th>
+                <th style="width: 15%;">작성자</th>
+                <th style="width: 12%;">작성일</th>
+                <th style="width: 10%;">조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @praise_post.each do |post| %>
+            <tr>
+                <td class="text-center text-muted"><%= post[:id] %></td>
+                <td class="text-left title-link">
+                    <span style="color: #e74c3c; font-size: 0.85rem; margin-right: 5px;">♥</span>
+                    <a href="#"><%= post[:title] %></a>
+                </td>
+                <td class="text-center"><%= post[:author] %></td>
+                <td class="text-center text-muted"><%= post[:date] %></td>
+                <td class="text-center text-muted"><%= post[:views] %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <div class="board-footer-actions" style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <button class="login-btn" style="width: auto; padding: 10px 25px;">칭찬글 쓰기</button>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="page-num active">1</a>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+<div class="about-hero">
+    <div class="hero-badge">About Us</div>
+    <h2>평생 배움의 길을 잇는 <span class="highlight">돌다리 학습</span></h2>
+    <p>우리는 모든 세대가 지식의 즐거움을 누릴 수 있는 튼튼한 토대를 만듭니다.</p>
+</div>
+
+<div class="about-content">
+    <!-- 1. 미션 섹션 (강조형) -->
+    <section class="mission-section">
+        <div class="mission-quote">
+            <span class="quote-mark">“</span>
+            <p>돌다리도 두드려보고 건너듯, 기초부터 탄탄하게!</p>
+            <span class="quote-mark">”</span>
+        </div>
+        <p class="mission-desc">
+            돌다리 학습 평생교육원은 유아부터 시니어까지 전 연령대를 아우르는 맞춤형 교육 프로그램을 통해 <br>
+            <strong>지역 사회의 교육 격차를 해소</strong>하고 <strong>삶의 질을 향상</strong>시키는 것을 목표로 합니다.
+        </p>
+    </section>
+
+    <!-- 2. 주요 특징 (카드형) -->
+    <section class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h4>전문적인 커리큘럼</h4>
+            <p>각 연령대별 발달 단계와 요구에 최적화된 교육 과정을 제공합니다.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h4>따뜻한 학습 공동체</h4>
+            <p>단순한 지식 전달을 넘어 사람과 사람이 연결되는 소통의 장을 지향합니다.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏛️</div>
+            <h4>공인된 교육 기관</h4>
+            <p>국가평생교육진흥원 등 공신력 있는 기관과 연계된 프로그램을 운영합니다.</p>
+        </div>
+    </section>
+
+    <!-- 3. 기관 연혁 -->
+    <section id="history" class="history-section">
+    <h3>기관 연혁</h3>
+    <div class="history-table-wrapper">
+        <table class="history-table">
+            <tbody>
+                <tr>
+                    <td class="year">2026</td>
+                    <td class="event"><strong>디지털 교육 혁신 우수기관 선정</strong> (인천광역시)</td>
+                </tr>
+                <tr>
+                    <td class="year">2025</td>
+                    <td class="event">누적 수강생 5만 명 돌파 / 시니어 특화 교육 과정 런칭</td>
+                </tr>
+                <tr>
+                    <td class="year">2024</td>
+                    <td class="event">평생학습대상 교육부 장관상 수상 / 온라인 플랫폼 오픈</td>
+                </tr>
+                <tr>
+                    <td class="year">2022</td>
+                    <td class="event"><strong>돌다리 학습 평생교육원 설립 및 개원</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    <!-- 4. 하단 정보 (정보 강조형) -->
+    <div class="location-info">
+        <h3>오시는 길 및 안내</h3>
+        <div class="info-details">
+            <div class="info-item">
+                <strong>📍 주소</strong>
+                <span>인천광역시 행복구 배움로 123 (돌다리 빌딩 4~5층)</span> <!-- 가상의 주소 -->
+            </div>
+            <div class="info-item">
+                <strong>📞 문의</strong>
+                <span>02-123-4567 (평일 09:00 ~ 18:00)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* 히로 섹션 보강 */
+    .about-hero { text-align: center; padding: 80px 20px; background: white; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .hero-badge { display: inline-block; background: #fff4eb; color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; }
+    .about-hero h2 { font-size: 2.8rem; color: var(--secondary-color); margin-bottom: 15px; }
+    .about-hero .highlight { color: var(--primary-color); }
+    
+    /* 본문 레이아웃 */
+    .about-content { background: white; padding: 60px 40px; border-radius: 20px; line-height: 1.8; }
+    
+    /* 미션 섹션: 인용구 스타일 */
+    .mission-section { text-align: center; margin-bottom: 60px; }
+    .mission-quote { position: relative; display: inline-block; margin-bottom: 25px; }
+    .mission-quote p { font-size: 1.6rem; font-weight: bold; color: var(--secondary-color); z-index: 1; position: relative; padding: 0 20px; }
+    .quote-mark { font-size: 4rem; color: #eee; font-family: serif; position: absolute; line-height: 1; top: -20px; }
+    .quote-mark:first-child { left: -30px; }
+    .quote-mark:last-child { right: -30px; top: auto; bottom: -40px; }
+    .mission-desc { color: #666; font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+    
+    /* 특장점 그리드 보강 */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .feature-card { background: #fcfcfc; padding: 35px 25px; border-radius: 20px; border: 1px solid #eee; transition: transform 0.3s ease; text-align: center; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 20px; }
+    .feature-card h4 { color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 15px; }
+    .feature-card p { color: #777; font-size: 0.95rem; }
+
+
+    /* 연혁 섹션 전용 스타일 */
+    .history-section { margin-top: 60px; margin-bottom: 60px; }
+    .history-section h3 { text-align: center; color: var(--secondary-color); margin-bottom: 30px; font-size: 1.8rem; }
+    .history-table-wrapper { max-width: 800px; margin: 0 auto; background: #fcfcfc; border-radius: 15px; padding: 20px; border: 1px solid #eee; }
+    .history-table { width: 100%; border-collapse: collapse; }
+    .history-table td { padding: 15px; border-bottom: 1px solid #eee; }
+    .history-table tr:last-child td { border-bottom: none; }
+    .history-table .year { font-weight: bold; color: var(--primary-color); width: 20%; font-size: 1.2rem; border-right: 2px solid #eee; }
+    .history-table .event { padding-left: 30px; color: #444; }
+
+    /* 오시는 길 보강 */
+    .location-info { background: #2c3e50; color: white; padding: 40px; border-radius: 20px; }
+    .location-info h3 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 25px; text-align: center; }
+    .info-details { max-width: 600px; margin: 0 auto; }
+    .info-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .info-item:last-child { border: none; }
+    .info-item strong { color: #adb5bd; }
+</style>

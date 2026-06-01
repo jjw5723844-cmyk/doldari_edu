@@ -1,0 +1,25 @@
+<h2><%= @group.capitalize %> 강의 목록</h2>
+<ul class="course-list">
+    <% if @course_list.nil? || @course_list.empty? %>
+        <p>현재 준비 중인 강의입니다. 조금만 기다려주세요!</p>
+    <% else %>
+        <% @course_list.each do |course| %>
+            <li class="course-item">
+                <div>
+                    <span class="category-tag"><%= course[:category] %></span>
+                    <strong style="font-size: 1.2rem;">
+                        <a href="/course/<%= course[:id] %>" style="text-decoration: none; color: inherit;">
+                            <%= course[:name] %>
+                        </a>
+                    </strong>
+                </div>
+                <a href="/course/<%= course[:id] %>" class="btn-small" style="text-decoration: none;">상세보기</a>
+                <button onclick="alert('<%= course[:name] %> 신청이 완료되었습니다!')">신청하기</button>
+            </li>
+        <% end %>
+    <% end %>
+</ul>
+
+<div style="margin-top: 30px;">
+    <a href="/" style="color: var(--secondary-color); text-decoration: none;">← 메인으로 돌아가기</a>
+</div>
