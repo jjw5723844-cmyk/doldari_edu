@@ -110,7 +110,6 @@ end
 
 get '/community/praise' do
   @title = "칭찬합시다"
-  # 칭찬합시다 페이지에서 사용할 임의의 게시글 데이터.
   @praise_post = $praise_posts_db
   erb :praise_board
 end
@@ -170,7 +169,6 @@ end
 
 get '/press' do
   @title = "보도자료"
-  # 샘플 데이터(임시 DB)
   @news_list = $press_list_db
   erb :press_list
 end
