@@ -8,6 +8,7 @@ require_relative 'database/community'
 # 서버 설정
 set :views, File.dirname(__FILE__) + '/views'
 set :public_folder, File.dirname(__FILE__) + '/public'
+set :erb, :escape_html => true
 
 # 메인 페이지
 get '/' do
@@ -160,11 +161,7 @@ get '/find_pw' do
 end
 
 post '/find_pw' do
-  # 비밀번호 임시 DB
-  "<script>
-    alert('입력하신 이메일로 임시 비밀번호를 발송했습니다. (현재 테스트 모드)');
-    window.location.href = '/login';
-  </script>"
+  erb :find_pw_result
 end
 
 get '/press' do
