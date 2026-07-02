@@ -66,7 +66,7 @@ get '/search' do
   # 모든 카테고리를 순회하는 방식으로 검색어와 일치하는 강의를 찾도록 한다.
     $courses_db.each do |group, list|
       list.each do |course|
-      # 이름(name) 혹은 설명(description)에 검색어가 포함되어 있는지 확인(대소문자 무시)
+      # 이름(name) 혹은 설명(description)에 검색어가 포함되어 있는지 확인
         if course[:name].include?(@query) || course[:description].include?(@query)
           @results << course
         end
