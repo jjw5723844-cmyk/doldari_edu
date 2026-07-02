@@ -1,5 +1,5 @@
 <!-- search_results.erb 생성 -->
-<h2>'<%= @query %>' 검색 결과 (<%= @results.size %>건)</h2>
+<h2>'<%= escape_html(@query) %>' 검색 결과 (<%= @results.size %>건)</h2>
 
 <ul class="course-list">
     <% if @results.empty? %>
