@@ -64,10 +64,14 @@ bundle install
 3. 웹 서버 실행
 config.ru 설정을 기반으로 서버를 구동합니다.
 
+각각 두 가지 방법으로 서버를 실행하는 명령문이 있습니다.
+
+3-1
 Bash
-bundle exec rackup
+3-1bundle exec rackup
 (또는 개발 환경에서 코드 수정 시 자동으로 서버가 재시작되도록 하려면 아래 명령어로 실행해도 좋습니다.)
 
+3-2
 Bash
 ruby app.rb
 (이 명령문이 좀 더 편합니다.)
