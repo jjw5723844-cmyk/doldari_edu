@@ -1,0 +1,105 @@
+<div class="container board-container">
+    <div class="board-header">
+        <h2>1:1 상담문의</h2>
+        <p class="board-header">교육 과정, 시설 이용 등 궁금하신 점을 남겨주시면 담당자가 신속하게 답변해 드립니다.</p>
+    </div>
+
+    <form action="/community/inquiry" method="post" class="inquiry-form-wrapper">
+        <div class="form-group">
+            <label for="inquiry-title">제목</label>
+            <input type="text" id="inquiry-title" name="title" placeholder="제목을 입력해 주세요." required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="inquiry-author">작성자</label>
+                <input type="text" id="inquiry-author" name="author" palceholder="이름을 입력해 주세요." required>
+            </div>
+            <div class="form-group">
+                <label for="inquiry-email">이메일 주소</label>
+                <input type="email" id="inquiry-email" name="email" placeholder="example@email.com" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inquiry-content">내용</label>
+            <textarea id="inquiry-content" name="content" rows="10" placeholder="문의하실 내용을 상세히 적어주세요. (접수된 문의는 비공개로 안전하게 처리됩니다.)" required></textarea>
+        </div>
+
+        <div class="form-actions">
+            <a href="/community" class="btn-cancel">취소</a>
+            <button type="submit" class="login-btn" style="width: auto; padding: 12px 35px; margin: 0;">문의 등록하기</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    /* 1:1 문의 폼 전용 스타일 */
+    .inquiry-form-wrapper {
+        background: #fcfcfc;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid #eee;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .inquiry-form-wrapper label {
+        font-weight: bold;
+        color: var(--secondary-color);
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .inquiry-form-wrapper input[type="text"],
+    .inquiry-form-wrapper input[type="email"],
+    .inquiry-form-wrapper textarea {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    .inquiry-form-wrapper input:focus,
+    .inquiry-form-wrapper textarea:focus {
+        border-color: var(--primary-color);
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+        padding-top: 25px;
+    }
+
+    .btn-cancel {
+        display: inline-block;
+        padding: 12px 35px;
+        background: #e9ecef;
+        color: #495057;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+
+    .btn-cancel:hover {
+        background: #dee2e6;
+    }
+</style>

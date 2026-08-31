@@ -1,0 +1,55 @@
+<!-- views/notice.erb -->
+<div class="container board-container">
+    <div class="board-header">
+        <h2>알림마당</h2>
+        <p class="board-info">총 <strong><%= @notices.size %></strong>건의 게시물이 있습니다.</p>
+    </div>
+
+    <div class="board-filter">
+        <% @categories.each do |cat| %>
+            <a href="/notice?category=<%= cat %>" 
+                class="filter-link <%= @current_category == cat ? 'active' : '' %>">
+                <%= cat %>
+            </a>
+        <% end %>
+    </div>
+
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th style="width: 8%;">번호</th>
+                <th style="width: 12%;">분류</th>
+                <th>제목</th>
+                <th style="width: 12%;">작성자</th>
+                <th style="width: 12%;">작성일</th>
+                <th style="width: 10%;">조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @notices.each do |notice| %>
+            <tr>
+                <td class="text-center"><%= notice[:id] %></td>
+                <td class="text-center">
+                    <span class="category-text"><%= notice[:category] %></span>
+                </td>
+                <td class="text-left title-link">
+                    <a href="#"><%= notice[:title] %></a>
+                </td>
+                <td class="text-center">관리자</td>
+                <td class="text-center"><%= notice[:date] %></td>
+                <td class="text-center">0</td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <a href="#" class="page-num active">1</a>
+    </div>
+</div>
+
+    <!-- 페이징 처리 디자인(예시) -->
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+    </div>
+</section>

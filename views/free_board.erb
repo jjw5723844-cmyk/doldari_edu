@@ -1,0 +1,40 @@
+<div class="container board-container">
+    <div class="board-header">
+        <h2>자유게시판</h2>
+        <p class="board-info">학습자 여러분의 자유로운 소통 공간입니다.</p>
+    </div>
+
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th style="width: 8%;">번호</th>
+                <th>제목</th>
+                <th style="width: 15%;">작성자</th>
+                <th style="width: 12%;">작성일</th>
+                <th style="width: 10%;">조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @post.each do |post| %>
+            <tr>
+                <td class="text-center text -mured"><%= post[:id] %></td>
+                <td class="text-left title-link">
+                    <a hreaf="#"><%= post[:title] %></a>
+                </td>
+                <td class="text-center"><%= post[:author] %></td>
+                <td class="text-center text-muted"><%= post[:date] %></td>
+                <td class="text-center test-muted"><%= post[:view] %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <div class="board-footer-actions" style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <button class="login-btn" style="width: auto; padding: 10px 25px;">글쓰기</button>
+    </div>
+
+    <div class="pagination">
+            <a href="#" class="page-num active">1</a>
+    </div>
+</div>
+

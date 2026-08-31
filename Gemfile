@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-reloader', group: :development  # 코드 수정 시 서버 자동 재시작
+gem 'erb'                                    # 뷰 템플릿 엔진
+gem 'prettier'

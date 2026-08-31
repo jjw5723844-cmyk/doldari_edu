@@ -1,0 +1,21 @@
+<div class="container">
+    <h2><%= @title %></h2>
+    <table class="board-table">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @news_list.each do |news| %>
+            <tr>
+                <td><%= news[:id] %></td>
+                <td><a href="#"><%= news[:title] %></a></td>
+                <td><%= news[:date] %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
